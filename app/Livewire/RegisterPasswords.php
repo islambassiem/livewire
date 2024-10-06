@@ -27,6 +27,10 @@ class RegisterPasswords extends Component
         $this->strengthScore = (new Zxcvbn())->passwordStrength($value)['score'];
     }
 
+    public function updatePassword(){
+        $this->updatedPassword($this->password);
+    }
+
     public function generatePassword(): void
     {
         $password = Str::password(12);

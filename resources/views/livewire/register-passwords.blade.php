@@ -9,7 +9,7 @@
         <div class="flex mt-1 mb-2">
             <div class="relative flex-1 col-span-4" x-data="{ show: true }">
 
-                <input wire:model="password"
+                <input wire:model="password" wire:keydown="updatePassword"
                     class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                     id="password" :type="show ? 'password' : 'text'" name="password" required
                     autocomplete="new-password" />
